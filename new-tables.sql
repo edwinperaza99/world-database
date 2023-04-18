@@ -1,0 +1,15 @@
+USE world;
+
+-- City table
+
+DROP TABLE IF EXISTS City;
+CREATE TABLE City (
+  ID INT(11) NOT NULL auto_increment,
+  Name CHAR(35) NOT NULL DEFAULT '',
+  CountryCode CHAR(3) NOT NULL DEFAULT '',
+  District CHAR(20) NOT NULL DEFAULT '',
+  Population INT(11) DEFAULT NULL,
+  PRIMARY KEY (ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+START TRANSACTION:
