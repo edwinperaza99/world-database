@@ -31,7 +31,7 @@ WHERE Code IN (
     SELECT Code 
     FROM Military
     WHERE NuclearPossession = 'T'
-)
+);
 
 -- select all the countries that speak English and the language is official 
 SELECT Name AS Country_Name, Code, Population
@@ -80,7 +80,6 @@ WHERE Continent = 'Asia';
 
 
 -- select country name and its revenue on all products export, order from highest to lowest
-
 SELECT Country.Name, Trade.RevenueOfAllProductsOnExports
 FROM Country
 JOIN Trade ON Country.Code = Trade.Code
@@ -147,7 +146,7 @@ WHERE CountryCode = 'CHN';
 SELECT COUNT(DISTINCT Language)
 FROM CountryLanguage;
 
--- select country with largest surface area
+-- Select country with largest surface area and show its currency
 SELECT Country.Name AS Country_Name, Country.Code, Country.SurfaceArea, Country.IndepYear AS Year_Of_Independence, Country.Capital, Trade.Currency
 FROM Country
 JOIN Trade ON Trade.Code = Country.Code
